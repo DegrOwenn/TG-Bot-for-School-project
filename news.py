@@ -9,7 +9,7 @@ def news(request):
     m = str(int(datetime.today().strftime("%m")) - 1)
     today = str(datetime.today().strftime(f'%Y-{m}-%d'))
 
-    API_KEY = "a240faf31aa94dadb4905a4cc4fb0634"
+    API_KEY = "YourAPIKey"
     url = f"https://newsapi.org/v2/everything?q={request}&from={today}&sortBy=publishedAt&apiKey={API_KEY}"
     news_data = requests.get(url).json()
     try:
